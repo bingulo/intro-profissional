@@ -1,0 +1,206 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Focus Beamer Presentation
+% LaTeX Template
+% Version 1.0 (8/8/18)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Pasquale Africa (https://github.com/elauksap/focus-beamertheme) with modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% Template license:
+% GNU GPL v3.0 License
+%
+% Important note:
+% The bibliography/references need to be compiled with bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\usetheme{focus} % Use the Focus theme supplied with the template
+% Add option [numbering=none] to disable the footer progress bar
+% Add option [numbering=fullbar] to show the footer progress bar as always full with a slide count
+
+% Uncomment to enable the ice-blue theme
+\definecolor{main}{RGB}{107, 40, 43}
+\definecolor{background}{RGB}{240, 247, 255}
+
+%------------------------------------------------
+
+\usepackage{booktabs} % Required for better table rules
+
+%----------------------------------------------------------------------------------------
+%	 TITLE SLIDE
+%----------------------------------------------------------------------------------------
+
+\title{Informação Profissional: \\ Arquitetura de Computadores}
+
+%\subtitle{Subtitle}
+
+\author{Carlos Eduardo Gallo Filho \\
+	Pedro Mendes \\
+	Caio}
+
+\titlegraphic{\includegraphics[scale=0.3]{images/usp.png}} % Optional title page image, comment this line to remove it
+
+\institute{Universidade de São Paulo \\ 
+	    Departamento de Computação e Matemática \\ 
+	    FFCLRP}
+
+\date{05/07/2022}
+
+%------------------------------------------------
+\begin{document}
+%------------------------------------------------
+
+\begin{frame}
+	\maketitle % Automatically created using the information in the commands above
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Introdução}
+    \begin{itemize}	
+	\item Arquitetura vs. organização.
+	\item ISA \textit{instruction set architecture}
+	\item Hierarquia de abstrações
+    \end{itemize}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}[noframenumbering]{No Slide Numbering}
+	This slide is not numbered and is citing reference \cite{knuth74}.
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Typesetting and Math}
+	The packages \texttt{inputenc} and \texttt{FiraSans}\footnote{\url{https://fonts.google.com/specimen/Fira+Sans}}\textsuperscript{,}\footnote{\url{http://mozilla.github.io/Fira/}} are used to properly set the main fonts.
+	\vfill
+	This theme provides styling commands to typeset \emph{emphasized}, \alert{alerted}, \textbf{bold}, \textcolor{example}{example text}, \dots
+	\vfill
+	\texttt{FiraSans} also provides support for mathematical symbols:
+	\begin{equation*}
+		e^{i\pi} + 1 = 0.
+	\end{equation*}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Blocks}
+	These blocks are part of 1 slide, to be displayed consecutively.
+	\begin{block}{Block}
+		Text.
+	\end{block}
+	\pause % Automatically creates a new "page" split between the above and above + below
+	\begin{alertblock}{Alert block}
+		Alert \alert{text}.
+	\end{alertblock}
+	\pause % Automatically creates a new "page" split between the above and above + below
+	\begin{exampleblock}{Example block}
+		Example \textcolor{example}{text}.
+	\end{exampleblock}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Columns}
+	\begin{columns}
+		\column{0.5\textwidth}
+			This text appears in the left column and wraps neatly with a margin between columns.
+		
+		\column{0.5\textwidth}
+			\includegraphics[width=\linewidth]{images/placeholder.jpg}
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Lists}
+	\begin{columns}[T, onlytextwidth] % T for top align, onlytextwidth to suppress the margin between columns
+		\column{0.33\textwidth}
+			Items:
+			\begin{itemize}
+				\item Item 1
+				\begin{itemize}
+					\item Subitem 1.1
+					\item Subitem 1.2
+				\end{itemize}
+				\item Item 2
+				\item Item 3
+			\end{itemize}
+		
+		\column{0.33\textwidth}
+			Enumerations:
+			\begin{enumerate}
+				\item First
+				\item Second
+				\begin{enumerate}
+					\item Sub-first
+					\item Sub-second
+				\end{enumerate}
+				\item Third
+			\end{enumerate}
+		
+		\column{0.33\textwidth}
+			Descriptions:
+			\begin{description}
+				\item[First] Yes.
+				\item[Second] No.
+			\end{description}
+	\end{columns}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}{Table}
+	\begin{table}
+		\centering % Centre the table on the slide
+		\begin{tabular}{l c}
+			\toprule
+			Discipline & Avg. Salary \\
+			\toprule
+			\textbf{Engineering} & \textbf{\$66,521} \\
+			Computer Sciences & \$60,005\\
+			Mathematics and Sciences & \$61,867\\
+			Business & \$56,720\\
+			Humanities \& Social Sciences & \$56,669\\
+			Agriculture and Natural Resources & \$53,565\\
+			Communications & \$51,448\\
+			\midrule
+			\textbf{Average for All Disciplines} & \textbf{\$58,114}\\
+			\bottomrule
+		\end{tabular}
+	\caption{Table caption}
+	\end{table}
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}[focus]
+	Obrigado!
+\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	 CLOSING/SUPPLEMENTARY SLIDES
+%----------------------------------------------------------------------------------------
+
+\appendix
+
+\begin{frame}{References}
+	\nocite{*} % Display all references regardless of if they were cited
+	\bibliography{ref.bib}
+	\bibliographystyle{plain}
+\end{frame}
+
+%------------------------------------------------
+
+\end{document}
