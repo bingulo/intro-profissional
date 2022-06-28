@@ -1,9 +1,9 @@
 \documentclass{article}
-
 \usepackage[a4paper, margin=1in]{geometry}
-
 \usepackage{graphicx}
+\usepackage{caption}
 \graphicspath{ {./images/} }
+\captionsetup{font=small}
 
 \title{Informação Profissional em Ciência da Computação:\\
 	Arquitetura de Computadores}
@@ -36,7 +36,7 @@ propósito geral de hoje em dia.
 \begin{figure}[h]
     \caption{Estrutura do IAS.}
     \centering
-    \includegraphics[width=0.75\textwidth]{ias.png}
+    \includegraphics[width=0.58\textwidth]{ias.png}
 \end{figure}
 
 Para se explicar a estrutura do IAS, deve-se atentar a 5 partes principais:
@@ -86,9 +86,27 @@ Assim, resumidamente, temos a memória principal, que armazena dados e
 instruções; a unidade lógica e aritmética (ALU), que opera os binários; a
 unidade de controle, que interpreta e executa instruções e, por fim, o
 equipmaneto de saída (E/S), que conecta o meio interno ao meio externo do
-computador.
+computador. \\
 
-\subsubsection{Endereçamento de memória}
+Como já antes dito, o modelo de IAS reflete em grande parte dos computadores atuais, por isso sua importância no mundo da computação.
+
+\subsection{Endereçamento de memória}
+O IAS possui 4.096 locais de armazenamento chamados de palavras, sendo esses dados ou instruções, cada um com 40 bits. As palavras são dividas em duas: palavra de número e palavra de instrução. \\
+
+\begin{itemize}
+	\item\quad 1) Palavra de número: contém um bit de sinal e outros 39 de armazenamento para o número. \\
+	\item\quad 2) Palavra de instrução: pode conter duas instruções de 20 bits, cada uma contendo um opcode de 8 bits - referência que um processador possui para uma determinada instrução - e 12 bits de endereço de memória.
+\end{itemize}
+
+\begin{figure}[h]
+    \caption{Tipos de palavras.}
+    \centering
+    \includegraphics[width=0.75\textwidth]{palavras.png}
+\end{figure}
+
+\subsubsection{Registradores}
+\subsection{Ciclos do IAS}
+
 
 \subsection{Segunda geração: Transístores}
 \subsection{Terceira geração: Circuitos Integrados}
