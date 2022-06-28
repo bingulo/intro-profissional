@@ -95,8 +95,42 @@ computador.
 \subsection{Gerações posteriores}
 
 \section{Aplicações} 
+As subseções a seguir trazem algumas aplicações da arquitetura de computadores.
+\subsection{Paradigmas de arquitetura}
+
+\subsubsection{CISC}
+O paradigma de arquitetura CISC (\textit{Complex Instruction Set Computer})
+denotam uma escolha de projeto na qual o conjunto das instruções utilizadas são
+projetadas para a execução de um conjunto de operações de baixo nível,
+envolvendo por exemplo, operações aritméticas juntas de uma escrita na memória,
+tudo em uma mesma instrução.
+
+Uma notória vantagem do uso do paradigma CISC se dá por facilitar a construção
+de compiladores e a programação em baixo nível, pois as instruções fornecem um
+pequeno nível de abstração. Além disso, por implementar as instruções a comuns
+nível de \texti{hardware}, o consumo de memória, tempo de execução e tamanho
+dos programas costumam ser menores. Uma desvantagem direta ao paradigma é o
+fato do projeto do hardware se tornar muito mais trabalhoso e complexo, além de
+necessitar maior quantidade de componentes, e por consequência, aumento de
+calor.
+
+\subsection{RISC}
+Em contrapartida ao CISC, existe o paragima RISC (\textit{Reduced Instruction
+Set Computer}). Um projeto RISC tem como princípio implementar um pequeno
+número mínimo de instruções simples, que em sua maioria são executadas em
+apenas um cíclo de máquina.
+
+Como esperado, processadores RISCs são mais fáceis de serem implementados e
+produzidos, gastando menor quantidade de componentes e melhorando a eficiência
+térmica, além de facilitar a implementação do \textit{pipelining} a nível do
+código de máquina. Como desvantagem, sua programação de baixo nível é mais
+complexa, bem como a construção de compiladores, o que implica uma má
+implementação a nível de software ser mais danosa.
+
 \subsection{Arquitetura x86} 
-\subsection{Sistemas Embarcados}
+A arquitetura de processadores x86 foi concebida pela intel e é o exemplar mais
+popular do tipo CISC. 
+
 \subsection{Arquitetura ARM} 
 \subsection{Computação em Nuvem}
 
