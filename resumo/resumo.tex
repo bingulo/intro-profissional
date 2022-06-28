@@ -2,6 +2,9 @@
 
 \usepackage[a4paper, margin=1in]{geometry}
 
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
 \title{Informação Profissional em Ciência da Computação:\\
 	Arquitetura de Computadores}
 \author{Carlos Eduardo Gallo Filho \\
@@ -15,14 +18,86 @@
 \maketitle
 
 \section{Introdução}
+\subsection{Arquitetura e Organização}
 \subsection{Estruturas e Funções}
+\subsubsection{Múltiplos núcleos}
+\subsubsection{Estrutura interna do núcleo}
 
-\section{História}
+\section{Evolução histórica}
+\subsection{Primeira geração: Arquitetura de Von Neumann}
+A primeira geração de computadores é conhecida pelo uso das válvulas para
+representar os elementos lógicos digitais e a memória. E também, o
+\textit{conceito de programa armazenado}, atribuída ao matemático John Von
+Neumann, que surgiu para a construção do computador EDVAC (Eletronic Discrete
+Variable Computer), mas foi principalmente discutido no desenvolvimento do
+computador IAS, o qual é um protótipo para quase todos os computadores de
+propósito geral de hoje em dia.
 
-\section{Aplicações}
-\subsection{Arquitetura x86}
+\begin{figure}[h]
+    \caption{Estrutura do IAS.}
+    \centering
+    \includegraphics[width=0.75\textwidth]{ias.png}
+\end{figure}
+
+Para se explicar a estrutura do IAS, deve-se atentar a 5 partes principais:
+
+\begin{enumerate}
+    \item Um computador terá de ser capaz de executar as
+	operações elementares básicas (adição, subtração, multiplicação,
+	divisão). Normalmente, para essas funções são criadas unidades
+	específicas para tais, comportadas em uma unidade maior
+	centralizadora denominada CA ou unidade lógica e aritmética.
+
+    \item Um computador terá de ser capaz de dar sequenciamento adequado as
+	suas operações, instruções e as instruções de controle (comandos que
+	regem o próprio sequenciamento do computador). Á essas undides é
+	denomiada uma unidade central chamada CC ou controle central.
+
+	As partes 1) e 2) juntas são chamadas de C. 
+
+    \item Um computador terá a necessidade de processar sequências longas de
+	operações, que, geralmente, não conseguem ser efetuadas em uma única
+	leva de comandos. Logo, requer-se uma unidade que armazene dados por
+	períodos duráveis para resolver problemas mais complexos, como
+	cálculos.
+
+	Essa unidade é denominada M ou memória.
+
+	Analogamente ao funcionamento do corpo humano, essas três partes podem
+	ser comparadas a parte cognitiva do corpo. Ou seja, a unidade lógica e
+	aritmética, o controle central e a memória são o conjunto pensante do
+	computador. Mas, assim como o corpo humano, se faz necessário a
+	comunicação com o mundo externo, tal é feito por um canal denominado
+	meio de gravação de sáida do dispositivo ou R, de modo que as últimas
+	duas partes interagem com esse canal para satisfazer a necessidade de
+	interação com o externo. 
+
+    \item A parte de entrada do meio R, a qual deve transferir as informações
+	desse para dentro de M e C é chamada de entrada ou I. É de boa prática a
+	entrada passar os dados para dentro de M e nunca diretamenta para C. 
+
+    \item Similarmente, a parte de saída do meio R, a qual deve transferir as
+	informações de M e C para o meio R, é chamada de saída ou O. É de boa
+	prática, também, a saída passar de M para R, assim, nunca diretamente
+	por C. 
+\end{enumerate}
+
+Assim, resumidamente, temos a memória principal, que armazena dados e
+instruções; a unidade lógica e aritmética (ALU), que opera os binários; a
+unidade de controle, que interpreta e executa instruções e, por fim, o
+equipmaneto de saída (E/S), que conecta o meio interno ao meio externo do
+computador.
+
+\subsubsection{Endereçamento de memória}
+
+\subsection{Segunda geração: Transístores}
+\subsection{Terceira geração: Circuitos Integrados}
+\subsection{Gerações posteriores}
+
+\section{Aplicações} 
+\subsection{Arquitetura x86} 
 \subsection{Sistemas Embarcados}
-\subsection{Arquitetura ARM}
+\subsection{Arquitetura ARM} 
 \subsection{Computação em Nuvem}
 
 \end{document}
