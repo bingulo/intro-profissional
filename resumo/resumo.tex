@@ -6,10 +6,10 @@
 \graphicspath{ {./images/} }
 
 \title{Informação Profissional em Ciência da Computação:\\
-	Arquitetura de Computadores}
+  Arquitetura de Computadores}
 \author{Carlos Eduardo Gallo Filho \\
-	Caio \\
-	Pedro}
+  Caio \\
+  Pedro}
 
 \date{\today}
 
@@ -34,52 +34,52 @@ computador IAS, o qual é um protótipo para quase todos os computadores de
 propósito geral de hoje em dia.
 
 \begin{figure}[h]
-    \caption{Estrutura do IAS.}
-    \centering
-    \includegraphics[width=0.75\textwidth]{ias.png}
+  \centering
+  \includegraphics[width=0.7\textwidth]{ias.png}
+  \caption{Estrutura do IAS.}
 \end{figure}
 
 Para se explicar a estrutura do IAS, deve-se atentar a 5 partes principais:
 
 \begin{enumerate}
-    \item Um computador terá de ser capaz de executar as
-	operações elementares básicas (adição, subtração, multiplicação,
-	divisão). Normalmente, para essas funções são criadas unidades
-	específicas para tais, comportadas em uma unidade maior
-	centralizadora denominada CA ou unidade lógica e aritmética.
+\item Um computador terá de ser capaz de executar as
+  operações elementares básicas (adição, subtração, multiplicação,
+  divisão). Normalmente, para essas funções são criadas unidades
+  específicas para tais, comportadas em uma unidade maior
+  centralizadora denominada CA ou unidade lógica e aritmética.
 
-    \item Um computador terá de ser capaz de dar sequenciamento adequado as
-	suas operações, instruções e as instruções de controle (comandos que
-	regem o próprio sequenciamento do computador). Á essas undides é
-	denomiada uma unidade central chamada CC ou controle central.
+\item Um computador terá de ser capaz de dar sequenciamento adequado as
+  suas operações, instruções e as instruções de controle (comandos que
+  regem o próprio sequenciamento do computador). Á essas undides é
+  denomiada uma unidade central chamada CC ou controle central.
 
-	As partes 1) e 2) juntas são chamadas de C. 
+  As partes 1) e 2) juntas são chamadas de C. 
 
-    \item Um computador terá a necessidade de processar sequências longas de
-	operações, que, geralmente, não conseguem ser efetuadas em uma única
-	leva de comandos. Logo, requer-se uma unidade que armazene dados por
-	períodos duráveis para resolver problemas mais complexos, como
-	cálculos.
+\item Um computador terá a necessidade de processar sequências longas de
+  operações, que, geralmente, não conseguem ser efetuadas em uma única
+  leva de comandos. Logo, requer-se uma unidade que armazene dados por
+  períodos duráveis para resolver problemas mais complexos, como
+  cálculos.
 
-	Essa unidade é denominada M ou memória.
+  Essa unidade é denominada M ou memória.
 
-	Analogamente ao funcionamento do corpo humano, essas três partes podem
-	ser comparadas a parte cognitiva do corpo. Ou seja, a unidade lógica e
-	aritmética, o controle central e a memória são o conjunto pensante do
-	computador. Mas, assim como o corpo humano, se faz necessário a
-	comunicação com o mundo externo, tal é feito por um canal denominado
-	meio de gravação de sáida do dispositivo ou R, de modo que as últimas
-	duas partes interagem com esse canal para satisfazer a necessidade de
-	interação com o externo. 
+  Analogamente ao funcionamento do corpo humano, essas três partes podem
+  ser comparadas a parte cognitiva do corpo. Ou seja, a unidade lógica e
+  aritmética, o controle central e a memória são o conjunto pensante do
+  computador. Mas, assim como o corpo humano, se faz necessário a
+  comunicação com o mundo externo, tal é feito por um canal denominado
+  meio de gravação de sáida do dispositivo ou R, de modo que as últimas
+  duas partes interagem com esse canal para satisfazer a necessidade de
+  interação com o externo. 
 
-    \item A parte de entrada do meio R, a qual deve transferir as informações
-	desse para dentro de M e C é chamada de entrada ou I. É de boa prática a
-	entrada passar os dados para dentro de M e nunca diretamenta para C. 
+\item A parte de entrada do meio R, a qual deve transferir as informações
+  desse para dentro de M e C é chamada de entrada ou I. É de boa prática a
+  entrada passar os dados para dentro de M e nunca diretamenta para C. 
 
-    \item Similarmente, a parte de saída do meio R, a qual deve transferir as
-	informações de M e C para o meio R, é chamada de saída ou O. É de boa
-	prática, também, a saída passar de M para R, assim, nunca diretamente
-	por C. 
+\item Similarmente, a parte de saída do meio R, a qual deve transferir as
+  informações de M e C para o meio R, é chamada de saída ou O. É de boa
+  prática, também, a saída passar de M para R, assim, nunca diretamente
+  por C. 
 \end{enumerate}
 
 Assim, resumidamente, temos a memória principal, que armazena dados e
@@ -99,11 +99,12 @@ As subseções a seguir trazem algumas aplicações da arquitetura de computador
 \subsection{Paradigmas de arquitetura}
 
 \subsubsection{CISC}
-O paradigma de arquitetura CISC (\textit{Complex Instruction Set Computer})
-denotam uma escolha de projeto na qual o conjunto das instruções utilizadas são
-projetadas para a execução de um conjunto de operações de baixo nível,
-envolvendo por exemplo, operações aritméticas juntas de uma escrita na memória,
-tudo em uma mesma instrução.
+O paradigma de arquitetura CISC (\textit{Complex Instruction Set
+  Computer}) denotam uma escolha de projeto na qual o conjunto das
+instruções utilizadas são projetadas para a execução de um conjunto de
+operações de baixo nível, envolvendo por exemplo, operações
+aritméticas juntas de uma escrita na memória, tudo em uma mesma
+instrução.
 
 Uma notória vantagem do uso do paradigma CISC se dá por facilitar a construção
 de compiladores e a programação em baixo nível, pois as instruções fornecem um
@@ -116,7 +117,7 @@ calor.
 
 \subsection{RISC}
 Em contrapartida ao CISC, existe o paragima RISC (\textit{Reduced Instruction
-Set Computer}). Um projeto RISC tem como princípio implementar um pequeno
+  Set Computer}). Um projeto RISC tem como princípio implementar um pequeno
 número mínimo de instruções simples, que em sua maioria são executadas em
 apenas um cíclo de máquina.
 
@@ -153,6 +154,7 @@ incluindo análise do fluxo de dados, execução especulativa, entre outras.
 
 Com os desktops se tornando cada vez mais comuns e novas necessidades surgindo,
 levando ao aparecimento de instruções orientadas ao processamento de multimídia.
+
 O Pentium II surge incorporando a tecnologia MMX da Intel no Pentium Pro. Em
 seguida, o Pentium III trouxe muitas outras novas instruções de ponto flutuante,
 que melhoravam muito a performance em algumas aplicações específicas. O ultimo
@@ -177,6 +179,80 @@ antigos, devido ao fato da arquitetura ter evoluido sem alterar instruções já
 existentes, o que colaborou para a manutenção da popularidade da arquitetura.
 
 \subsection{Sistemas embarcados}
+Sistemas embarcados são caracterizados pela combinação de
+\textit{hardware} e \textit{software} utilizados em conjunto para
+formar um sistema de propósito específico, em contraste aos
+computadores de propósito geral abordados. Os tipos de sistemas
+embarcados são dos mais variados, incluindo desde sistemas automotivos
+até telefones celulares.
+
+A organização de um sistema embarcado, como esperado, também difere à
+de um sistema de propósito geral, o que inclui partes estritamente
+planejadas para o ambiente de trabalho do sistema. Isso implica que no
+geral, sistemas embarcados diferem muito entre si, e portanto são
+difíceis de serem caracterizados de maneira genérica. No entanto,
+algumas características comuns de sistemas embarcados podem ser
+descritas:
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{embarcado.png}
+  \caption{Possível organização de um sistema embarcado}
+\end{figure}
+
+\begin{itemize}
+\item Possuem uma interface de comunicação com o ambiente,
+  o que inclui sensores integrados.
+
+\item A interface de usuário é simplificada, sendo até mesmo
+  inexistente em alguns projetos.
+
+\item A interface de depuração muitas vezes é utilizada para
+  diagnostico do sistema controlado, não apenas do microcontrolador.
+
+\item Uso de hardware especializado, incluindo até mesmo circuitos
+  não digitais em alguns casos.
+
+\item Software possui uma função e objetivo fixo e bem definido.
+
+\item Eficiencia é de extrema importancia, o que inclui performance,
+  baixo consumo de energia, espaço e consumo de memória.
+\end{itemize}
+
+Alguns sistemas embarcados complexos acabam incorporando processadores
+de aplicação, capaz de executarem sistemas operacionais complexos, o
+que inclui a adição da natureza de propósito geral aos
+microcontroladores, ainda que em suma maioria estes possuam apenas um
+processador dedicado.
+
+\subsubsection{Microcontroladores}
+Enquanto microprocessadores se beneficiaram dos avanços da
+miniaturização de componentes aumentando seu conjunto de instruções,
+memória e núcleos, os microcontroladores o usam para integrar todos os
+outros componentes de um computador em um único chip, o que inclui
+memória RAM, ROM, \textit{clock} e unidade de controle de entrada e
+saída. Obviamente, os elementos de um microcontrolador são mais
+simples, porém possuem alta eficiencia energética e baixíssimo custo.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{uc.png}
+  \caption{Organização típica de um microcontrolador}
+\end{figure}
+
+\subsubsection{Internet das Coisas (IoT)}
+O termo IoT (\textit{Internet of Things}) é utilizado para denotar o
+fenômeno de expansão da rede de comunicação entre dispositivos
+embarcados "inteligentes". O fenômeno vem se tornando cada vez mais
+popular e denota a inclusão de sistemas microcontrolados em objetos
+dos mais variados tipos, como geladeira, lampadas e torradeiras. a IoT
+é responsável pela integração dos possíveis objetos para formar um
+grande sistema automatizável. Um exemplo clássico de IoT são os
+sistemas de automação residencial.
+
+Uma caraterística importante dos sistemas IoT é o caráter da conexão
+dos seus principais dispositivos, definida por baixa largura de banda,
+baixa repetição de captura e uso de dados.
 
 \subsection{Arquitetura ARM} 
 
