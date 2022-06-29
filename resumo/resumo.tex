@@ -129,9 +129,57 @@ implementação a nível de software ser mais danosa.
 
 \subsection{Arquitetura x86} 
 A arquitetura de processadores x86 foi concebida pela intel e é o exemplar mais
-popular do tipo CISC. 
+popular do tipo CISC, trazendo muitos princípios de \textit{design} que só
+existiam até então em \textit{mainframes}. A arquitetura teve seu surgimento
+junto ao processador 8086 em 1978, que foi introduzido como uma extensão de 16
+bits ao famoso 8080, primeiro microprocessador de propósito geral.
+
+A linhagem de processadores x86 continou a evoluir, levando ao aparecimento do
+80286, 80386 e 80486, cada qual incrementando novas instruções na arquitetura,
+além de melhorar aspectos de organização utilizando a rápida evolução da
+microeletrônica. O 80286 possibilitou a ampliação do número de memória
+endereçável para 16 MB, ao invés de 1 MB que seu antecessor era capaz. Já o
+80386 foi o primeiro processador de 32 bits, trazendo muitas melhorias em
+comparação ao 80236, o que incluu o suporte a multitarefas. Sucessivamente,
+o 80486 incrementou uma nova tecnologia de cache junto de uma avançada
+\textit{pipelining} de instruções, além de também adicionar um coprocessador
+para instruções matemáticas complexas.
+
+Já entrando na quinta geração de processadores, surge o Pentium, que sucede o
+80486 adicionando tecnologia superescalar, que é uma forma de paralelismo a
+nível de instrução utilizando múltiplas unidades de execução. Seguindo para
+o Pentium Pro, este continuou a implementação de tecnicas multiescalares,
+incluindo análise do fluxo de dados, execução especulativa, entre outras.
+
+Com os desktops se tornando cada vez mais comuns e novas necessidades surgindo,
+levando ao aparecimento de instruções orientadas ao processamento de multimídia.
+O Pentium II surge incorporando a tecnologia MMX da Intel no Pentium Pro. Em
+seguida, o Pentium III trouxe muitas outras novas instruções de ponto flutuante,
+que melhoravam muito a performance em algumas aplicações específicas. O ultimo
+proessador da linha foi o Pentium 4, que apenas melhorou algumas tecnologias
+utilizadas em seu antecessor.
+
+Após a virada do século, o desenvolvimento de novos processadores acabou mudando
+de rumo, quando foi alcançado limites práticos para o aumento do \textit{clock},
+por exemplo. Como não era possível mais aproveitar os avanços da miniaturização
+para melhorar a performance, os processadores passaram a serem multiplicados
+em diferentes núcleos. O primeiro \textit{dual core} x86 foi o Intel Core.
+Posteriormente o Intel Core foi extendido a 64 bits, surgindo posteriormente
+variantes como o Core 2 Quad, com quatro núcelos. Outra tecnologia importante
+adicionada à linha Core 2 foram as AVE, que possuiam instruções de grande
+tamanho para processamento eficiente de vetores.
+
+Por mais que a arquitetura x86 seja antiga, ela se mostrou em constante
+evolução, o que inclui sempre a adição de novos recursos e instruções,
+aproveitando os avanços da microeletrônica para mudanças na organização. Ainda
+assim, processadores recentes possuem retrocompatibilidade com programas
+antigos, devido ao fato da arquitetura ter evoluido sem alterar instruções já
+existentes, o que colaborou para a manutenção da popularidade da arquitetura.
+
+\subsection{Sistemas embarcados}
 
 \subsection{Arquitetura ARM} 
+
 \subsection{Computação em Nuvem}
 
 \end{document}
