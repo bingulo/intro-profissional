@@ -6,10 +6,10 @@
 \graphicspath{ {./images/} }
 
 \title{Informação Profissional em Ciência da Computação:\\
-  Arquitetura de Computadores}
+       Arquitetura de Computadores}
 \author{Carlos Eduardo Gallo Filho \\
-  Caio \\
-  Pedro}
+        Caio \\
+        Pedro}
 
 \date{\today}
 
@@ -34,52 +34,51 @@ computador IAS, o qual é um protótipo para quase todos os computadores de
 propósito geral de hoje em dia.
 
 \begin{figure}[h]
-  \centering
-  \includegraphics[width=0.7\textwidth]{ias.png}
-  \caption{Estrutura do IAS.}
+    \centering
+    \includegraphics[width=0.7\textwidth]{ias.png}
+    \caption{Estrutura do IAS.}
 \end{figure}
 
 Para se explicar a estrutura do IAS, deve-se atentar a 5 partes principais:
 
 \begin{enumerate}
-\item Um computador terá de ser capaz de executar as
-  operações elementares básicas (adição, subtração, multiplicação,
-  divisão). Normalmente, para essas funções são criadas unidades
-  específicas para tais, comportadas em uma unidade maior
-  centralizadora denominada CA ou unidade lógica e aritmética.
+    \item Um computador terá de ser capaz de executar as operações elementares
+        básicas (adição, subtração, multiplicação, divisão). Normalmente, para
+        essas funções são criadas unidades específicas para tais, comportadas em
+        uma unidade maior centralizadora denominada CA ou unidade lógica e
+        aritmética.
 
-\item Um computador terá de ser capaz de dar sequenciamento adequado as
-  suas operações, instruções e as instruções de controle (comandos que
-  regem o próprio sequenciamento do computador). Á essas undides é
-  denomiada uma unidade central chamada CC ou controle central.
+    \item Um computador terá de ser capaz de dar sequenciamento adequado as suas
+        operações, instruções e as instruções de controle (comandos que regem o
+        próprio sequenciamento do computador). Á essas undides é denomiada uma
+        unidade central chamada CC ou controle central.
 
-  As partes 1) e 2) juntas são chamadas de C. 
+        As partes 1) e 2) juntas são chamadas de C. 
 
-\item Um computador terá a necessidade de processar sequências longas de
-  operações, que, geralmente, não conseguem ser efetuadas em uma única
-  leva de comandos. Logo, requer-se uma unidade que armazene dados por
-  períodos duráveis para resolver problemas mais complexos, como
-  cálculos.
+    \item Um computador terá a necessidade de processar sequências longas de
+        operações, que, geralmente, não conseguem ser efetuadas em uma única
+        leva de comandos. Logo, requer-se uma unidade que armazene dados por
+        períodos duráveis para resolver problemas mais complexos, como cálculos.
 
-  Essa unidade é denominada M ou memória.
+        Essa unidade é denominada M ou memória.
 
-  Analogamente ao funcionamento do corpo humano, essas três partes podem
-  ser comparadas a parte cognitiva do corpo. Ou seja, a unidade lógica e
-  aritmética, o controle central e a memória são o conjunto pensante do
-  computador. Mas, assim como o corpo humano, se faz necessário a
-  comunicação com o mundo externo, tal é feito por um canal denominado
-  meio de gravação de sáida do dispositivo ou R, de modo que as últimas
-  duas partes interagem com esse canal para satisfazer a necessidade de
-  interação com o externo. 
+        Analogamente ao funcionamento do corpo humano, essas três partes podem
+        ser comparadas a parte cognitiva do corpo. Ou seja, a unidade lógica e
+        aritmética, o controle central e a memória são o conjunto pensante do
+        computador. Mas, assim como o corpo humano, se faz necessário a
+        comunicação com o mundo externo, tal é feito por um canal denominado
+        meio de gravação de sáida do dispositivo ou R, de modo que as últimas
+        duas partes interagem com esse canal para satisfazer a necessidade de
+        interação com o externo. 
 
-\item A parte de entrada do meio R, a qual deve transferir as informações
-  desse para dentro de M e C é chamada de entrada ou I. É de boa prática a
-  entrada passar os dados para dentro de M e nunca diretamenta para C. 
+    \item A parte de entrada do meio R, a qual deve transferir as informações
+        desse para dentro de M e C é chamada de entrada ou I. É de boa prática a
+        entrada passar os dados para dentro de M e nunca diretamenta para C. 
 
-\item Similarmente, a parte de saída do meio R, a qual deve transferir as
-  informações de M e C para o meio R, é chamada de saída ou O. É de boa
-  prática, também, a saída passar de M para R, assim, nunca diretamente
-  por C. 
+    \item Similarmente, a parte de saída do meio R, a qual deve transferir as
+        informações de M e C para o meio R, é chamada de saída ou O. É de boa
+        prática, também, a saída passar de M para R, assim, nunca diretamente
+        por C. 
 \end{enumerate}
 
 Assim, resumidamente, temos a memória principal, que armazena dados e
@@ -99,27 +98,26 @@ As subseções a seguir trazem algumas aplicações da arquitetura de computador
 \subsection{Paradigmas de arquitetura}
 
 \subsubsection{CISC}
-O paradigma de arquitetura CISC (\textit{Complex Instruction Set
-  Computer}) denotam uma escolha de projeto na qual o conjunto das
-instruções utilizadas são projetadas para a execução de um conjunto de
-operações de baixo nível, envolvendo por exemplo, operações
-aritméticas juntas de uma escrita na memória, tudo em uma mesma
-instrução.
+O paradigma de arquitetura CISC (\textit{Complex Instruction Set Computer})
+denotam uma escolha de projeto na qual o conjunto das instruções utilizadas são
+projetadas para a execução de um conjunto de operações de baixo nível,
+envolvendo por exemplo, operações aritméticas juntas de uma escrita na memória,
+tudo em uma mesma instrução.
 
 Uma notória vantagem do uso do paradigma CISC se dá por facilitar a construção
 de compiladores e a programação em baixo nível, pois as instruções fornecem um
 pequeno nível de abstração. Além disso, por implementar as instruções a comuns
-nível de \texti{hardware}, o consumo de memória, tempo de execução e tamanho
-dos programas costumam ser menores. Uma desvantagem direta ao paradigma é o
-fato do projeto do hardware se tornar muito mais trabalhoso e complexo, além de
+nível de \texti{hardware}, o consumo de memória, tempo de execução e tamanho dos
+programas costumam ser menores. Uma desvantagem direta ao paradigma é o fato do
+projeto do hardware se tornar muito mais trabalhoso e complexo, além de
 necessitar maior quantidade de componentes, e por consequência, aumento de
 calor.
 
 \subsection{RISC}
 Em contrapartida ao CISC, existe o paragima RISC (\textit{Reduced Instruction
-  Set Computer}). Um projeto RISC tem como princípio implementar um pequeno
-número mínimo de instruções simples, que em sua maioria são executadas em
-apenas um cíclo de máquina.
+Set Computer}). Um projeto RISC tem como princípio implementar um pequeno número
+mínimo de instruções simples, que em sua maioria são executadas em apenas um
+cíclo de máquina.
 
 Como esperado, processadores RISCs são mais fáceis de serem implementados e
 produzidos, gastando menor quantidade de componentes e melhorando a eficiência
@@ -141,15 +139,15 @@ além de melhorar aspectos de organização utilizando a rápida evolução da
 microeletrônica. O 80286 possibilitou a ampliação do número de memória
 endereçável para 16 MB, ao invés de 1 MB que seu antecessor era capaz. Já o
 80386 foi o primeiro processador de 32 bits, trazendo muitas melhorias em
-comparação ao 80236, o que incluu o suporte a multitarefas. Sucessivamente,
-o 80486 incrementou uma nova tecnologia de cache junto de uma avançada
+comparação ao 80236, o que incluu o suporte a multitarefas. Sucessivamente, o
+80486 incrementou uma nova tecnologia de cache junto de uma avançada
 \textit{pipelining} de instruções, além de também adicionar um coprocessador
 para instruções matemáticas complexas.
 
 Já entrando na quinta geração de processadores, surge o Pentium, que sucede o
 80486 adicionando tecnologia superescalar, que é uma forma de paralelismo a
-nível de instrução utilizando múltiplas unidades de execução. Seguindo para
-o Pentium Pro, este continuou a implementação de tecnicas multiescalares,
+nível de instrução utilizando múltiplas unidades de execução. Seguindo para o
+Pentium Pro, este continuou a implementação de tecnicas multiescalares,
 incluindo análise do fluxo de dados, execução especulativa, entre outras.
 
 Com os desktops se tornando cada vez mais comuns e novas necessidades surgindo,
@@ -164,8 +162,8 @@ utilizadas em seu antecessor.
 Após a virada do século, o desenvolvimento de novos processadores acabou mudando
 de rumo, quando foi alcançado limites práticos para o aumento do \textit{clock},
 por exemplo. Como não era possível mais aproveitar os avanços da miniaturização
-para melhorar a performance, os processadores passaram a serem multiplicados
-em diferentes núcleos. O primeiro \textit{dual core} x86 foi o Intel Core.
+para melhorar a performance, os processadores passaram a serem multiplicados em
+diferentes núcleos. O primeiro \textit{dual core} x86 foi o Intel Core.
 Posteriormente o Intel Core foi extendido a 64 bits, surgindo posteriormente
 variantes como o Core 2 Quad, com quatro núcelos. Outra tecnologia importante
 adicionada à linha Core 2 foram as AVE, que possuiam instruções de grande
@@ -179,83 +177,109 @@ antigos, devido ao fato da arquitetura ter evoluido sem alterar instruções já
 existentes, o que colaborou para a manutenção da popularidade da arquitetura.
 
 \subsection{Sistemas embarcados}
-Sistemas embarcados são caracterizados pela combinação de
-\textit{hardware} e \textit{software} utilizados em conjunto para
-formar um sistema de propósito específico, em contraste aos
-computadores de propósito geral abordados. Os tipos de sistemas
-embarcados são dos mais variados, incluindo desde sistemas automotivos
-até telefones celulares.
+Sistemas embarcados são caracterizados pela combinação de \textit{hardware} e
+\textit{software} utilizados em conjunto para formar um sistema de propósito
+específico, em contraste aos computadores de propósito geral abordados. Os tipos
+de sistemas embarcados são dos mais variados, incluindo desde sistemas
+automotivos até telefones celulares.
 
-A organização de um sistema embarcado, como esperado, também difere à
-de um sistema de propósito geral, o que inclui partes estritamente
-planejadas para o ambiente de trabalho do sistema. Isso implica que no
-geral, sistemas embarcados diferem muito entre si, e portanto são
-difíceis de serem caracterizados de maneira genérica. No entanto,
-algumas características comuns de sistemas embarcados podem ser
-descritas:
+A organização de um sistema embarcado, como esperado, também difere à de um
+sistema de propósito geral, o que inclui partes estritamente planejadas para o
+ambiente de trabalho do sistema. Isso implica que no geral, sistemas embarcados
+diferem muito entre si, e portanto são difíceis de serem caracterizados de
+maneira genérica. No entanto, algumas características comuns de sistemas
+embarcados podem ser descritas:
 
 \begin{figure}[h]
-  \centering
-  \includegraphics[width=0.4\textwidth]{embarcado.png}
-  \caption{Possível organização de um sistema embarcado}
+    \centering
+    \includegraphics[width=0.4\textwidth]{embarcado.png}
+    \caption{Possível organização de um sistema embarcado}
 \end{figure}
 
 \begin{itemize}
-\item Possuem uma interface de comunicação com o ambiente,
-  o que inclui sensores integrados.
+    \item Possuem uma interface de comunicação com o ambiente,
+        o que inclui sensores integrados.
 
-\item A interface de usuário é simplificada, sendo até mesmo
-  inexistente em alguns projetos.
+    \item A interface de usuário é simplificada, sendo até mesmo
+        inexistente em alguns projetos.
 
-\item A interface de depuração muitas vezes é utilizada para
-  diagnostico do sistema controlado, não apenas do microcontrolador.
+    \item A interface de depuração muitas vezes é utilizada para
+        diagnostico do sistema controlado, não apenas do microcontrolador.
 
-\item Uso de hardware especializado, incluindo até mesmo circuitos
-  não digitais em alguns casos.
+    \item Uso de hardware especializado, incluindo até mesmo circuitos
+        não digitais em alguns casos.
 
-\item Software possui uma função e objetivo fixo e bem definido.
+    \item Software possui uma função e objetivo fixo e bem definido.
 
-\item Eficiencia é de extrema importancia, o que inclui performance,
-  baixo consumo de energia, espaço e consumo de memória.
+    \item Eficiencia é de extrema importancia, o que inclui performance,
+        baixo consumo de energia, espaço e consumo de memória.
 \end{itemize}
 
-Alguns sistemas embarcados complexos acabam incorporando processadores
-de aplicação, capaz de executarem sistemas operacionais complexos, o
-que inclui a adição da natureza de propósito geral aos
-microcontroladores, ainda que em suma maioria estes possuam apenas um
-processador dedicado.
+Alguns sistemas embarcados complexos acabam incorporando processadores de
+aplicação, capaz de executarem sistemas operacionais complexos, o que inclui a
+adição da natureza de propósito geral aos microcontroladores, ainda que em suma
+maioria estes possuam apenas um processador dedicado.
 
 \subsubsection{Microcontroladores}
-Enquanto microprocessadores se beneficiaram dos avanços da
-miniaturização de componentes aumentando seu conjunto de instruções,
-memória e núcleos, os microcontroladores o usam para integrar todos os
-outros componentes de um computador em um único chip, o que inclui
-memória RAM, ROM, \textit{clock} e unidade de controle de entrada e
-saída. Obviamente, os elementos de um microcontrolador são mais
-simples, porém possuem alta eficiencia energética e baixíssimo custo.
+Enquanto microprocessadores se beneficiaram dos avanços da miniaturização de
+componentes aumentando seu conjunto de instruções, memória e núcleos, os
+microcontroladores o usam para integrar todos os outros componentes de um
+computador em um único chip, o que inclui memória RAM, ROM, \textit{clock} e
+unidade de controle de entrada e saída. Obviamente, os elementos de um
+microcontrolador são mais simples, porém possuem alta eficiencia energética e
+baixíssimo custo.
 
 \begin{figure}[h]
-  \centering
-  \includegraphics[width=0.6\textwidth]{uc.png}
-  \caption{Organização típica de um microcontrolador}
+    \centering
+    \includegraphics[width=0.6\textwidth]{uc.png}
+    \caption{Organização típica de um microcontrolador}
 \end{figure}
 
 \subsubsection{Internet das Coisas (IoT)}
-O termo IoT (\textit{Internet of Things}) é utilizado para denotar o
-fenômeno de expansão da rede de comunicação entre dispositivos
-embarcados "inteligentes". O fenômeno vem se tornando cada vez mais
-popular e denota a inclusão de sistemas microcontrolados em objetos
-dos mais variados tipos, como geladeira, lampadas e torradeiras. a IoT
-é responsável pela integração dos possíveis objetos para formar um
-grande sistema automatizável. Um exemplo clássico de IoT são os
+O termo IoT (\textit{Internet of Things}) é utilizado para denotar o fenômeno de
+expansão da rede de comunicação entre dispositivos embarcados "inteligentes". O
+fenômeno vem se tornando cada vez mais popular e denota a inclusão de sistemas
+microcontrolados em objetos dos mais variados tipos, como geladeira, lampadas e
+torradeiras. a IoT é responsável pela integração dos possíveis objetos para
+formar um grande sistema automatizável. Um exemplo clássico de IoT são os
 sistemas de automação residencial.
 
-Uma caraterística importante dos sistemas IoT é o caráter da conexão
-dos seus principais dispositivos, definida por baixa largura de banda,
-baixa repetição de captura e uso de dados.
+Uma caraterística importante dos sistemas IoT é o caráter da conexão dos seus
+principais dispositivos, definida por baixa largura de banda, baixa repetição de
+captura e uso de dados.
 
 \subsection{Arquitetura ARM} 
 
 \subsection{Computação em Nuvem}
+Com o avanço das tecnologias de telecomunicações, o que envolve as redes de
+computadores, se tornou comum o oferecimento de serviços computacionais
+disponíveis pela Internet \textbf{sob demanda}. Tais serviços incluem
+armazenamento de arquivos, hospedagem de aplicações, máquinas virtuais, execução
+de softwares entre outros. Isso resulta em uma menor complexidade na manutenção
+e maior escalabilidade dos sistemas finais.
 
+A justificativa para a existência dos serviços em nuvem é a redução do trabalho
+necessário para provisionamento e manutenção de uma infraestrutura de TI para
+atividades que envolvem produtos finais pertencentes às camadas mais superiores
+da stack de software\footnote{O termo stack de software é utilizado para denotar
+os diferentes subsistemas de software que compõe uma plataforma completa.}, pois
+esse passsa a ser terceirizado a um provedor de nuvem (CSP, do inglês
+\textit{Cloud Service Provider}). Os serviços nuvem oferecem portanto uma menor
+complexidade para seus usuários, bem como maior escalabilidade.
+
+As modalidades de serviços podem ser divididas em ordem crescente de abstração
+em: IaaS (\textit{Infrastructure as a Service}), PaaS (\textit{Plataform as a
+Service}) e SaaS (\textit{Software as a Service}). O primeiro se refere ao
+fornecimento de uma infraestrutura de hardware virtual, provendo um ambiente
+customizável a nível de sistema operacional. Já o segundo, provê um ambiente
+para hospedagem de aplicações arbitrárias do usuário, contando com todo o resto
+administrado pelo provedor do serviço. Por fim, o Saas se refere ao serviço da
+execução de um programa na infraestrutura da provedora.
+
+Ademais as aparentes vantagens, a arquitetura em nuvem apresenta muitos
+problemas críticos, como de segurança e privacidade. Atualmente se existe o
+oligopólio das \textit{big techs}, cujos serviços principais são pautados na
+manipulação, processamento e posse dos dados de seus clientes e usuários. Além
+disso, a arquitetura nuvem possui menor flexibilidade quanto ao controle e
+conhecimento do usuário sobre as camadas inferiores do sistema.
 \end{document}
