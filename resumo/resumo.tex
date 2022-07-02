@@ -1,9 +1,9 @@
 \documentclass{article}
-
 \usepackage[a4paper, margin=1in]{geometry}
-
 \usepackage{graphicx}
+\usepackage{caption}
 \graphicspath{ {./images/} }
+\captionsetup{font=small}
 
 \title{Informação Profissional em Ciência da Computação:\\
        Arquitetura de Computadores}
@@ -34,9 +34,9 @@ computador IAS, o qual é um protótipo para quase todos os computadores de
 propósito geral de hoje em dia.
 
 \begin{figure}[h]
+    \caption{Figura 1: Estrutura do IAS.}
     \centering
-    \includegraphics[width=0.7\textwidth]{ias.png}
-    \caption{Estrutura do IAS.}
+    \includegraphics[width=0.58\textwidth]{ias.png}
 \end{figure}
 
 Para se explicar a estrutura do IAS, deve-se atentar a 5 partes principais:
@@ -84,14 +84,60 @@ Para se explicar a estrutura do IAS, deve-se atentar a 5 partes principais:
 Assim, resumidamente, temos a memória principal, que armazena dados e
 instruções; a unidade lógica e aritmética (ALU), que opera os binários; a
 unidade de controle, que interpreta e executa instruções e, por fim, o
-equipamento de saída (E/S), que conecta o meio interno ao meio externo do
+equipmaneto de saída (E/S), que conecta o meio interno ao meio externo do
 computador.
 
-\subsubsection{Endereçamento de memória}
+Como já antes dito, o modelo de IAS reflete em grande parte dos computadores
+atuais, por isso sua importância no mundo da computação.
 
+\subsubsection{Endereçamento de memória}
+O IAS possui 4.096 locais de armazenamento chamados de palavras, sendo esses
+dados ou instruções, cada um com 40 bits. As palavras são dividas em duas:
+palavra de número e palavra de instrução.
+
+\begin{itemize}
+        \item Palavra de número: contém um bit de sinal e outros 39 de
+            armazenamento para o número. 
+        \item Palavra de instrução: pode conter duas instruções de 20 bits,
+            cada uma contendo um opcode de 8 bits - referência que um
+            processador possui para uma determinada instrução - e 12 bits de
+            endereço de memória.
+\end{itemize}
+
+\begin{figure}[h]
+   \caption{Figura 2: Tipos de palavras.}\textbf{}
+   \centering
+  \includegraphics[width=0.75\textwidth]{palavras.png}
+\end{figure}
+
+\subsubsection{Registradores}
+Passando para as unidades menores do computador IAS, tem-se os locais de
+armazenamento da unidade de controle e da ALU, chamados de registradores.
+
+\begin{itemize}
+        \item Registrador de buffer de memória (MBR): é o local onde permanece
+            a palavra a ser armazenada na memória ou enviada à unidade E/S,
+            como também é o local para receber a palavra a partir da E/S ou a
+            partir da memória.
+        \item Registrador de endereço de memória (MAR): local que contém o
+            endereço da memória da palavra a ser escrito ou lido pelo MBR.
+        \item Registrador de instruções (IR): contém o opcode de 8 bits da
+            instrução que está sendo executada.
+        \item Registrador de buffer de instrução (IBR): mantém temporariamente
+            a instrução da direita da palavra da memória.
+        \item Contador do programa (PC): mantém o próximo par de instruções a
+            ser buscado na memória.
+        \item Acumulador (AC) e quociente-multiplicador (MQ): registradores
+            usados para realizar as operações da ALU, sendo o AC o que mantém
+            os bits mais significativos e o MQ os bits menos significativos.
+\end{itemize}
+
+\subsubsection{Ciclos do IAS}
+\subsubsection{Conjunto de instruções IAS}
 \subsection{Segunda geração: Transístores}
 \subsection{Terceira geração: Circuitos Integrados}
 \subsection{Gerações posteriores}
+\subsection{Comparação entre as gerações}
 
 \section{Aplicações} 
 As subseções a seguir trazem algumas aplicações da arquitetura de computadores.
