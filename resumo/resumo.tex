@@ -50,7 +50,7 @@ Para se explicar a estrutura do IAS, deve-se atentar a 5 partes principais:
 
     \item Um computador terá de ser capaz de dar sequenciamento adequado as suas
         operações, instruções e as instruções de controle (comandos que regem o
-        próprio sequenciamento do computador). Á essas undides é denomiada uma
+        próprio sequenciamento do computador). Á essas unidades é denominada uma
         unidade central chamada CC ou controle central.
 
         As partes 1) e 2) juntas são chamadas de C. 
@@ -67,13 +67,13 @@ Para se explicar a estrutura do IAS, deve-se atentar a 5 partes principais:
         aritmética, o controle central e a memória são o conjunto pensante do
         computador. Mas, assim como o corpo humano, se faz necessário a
         comunicação com o mundo externo, tal é feito por um canal denominado
-        meio de gravação de sáida do dispositivo ou R, de modo que as últimas
+        meio de gravação de saída do dispositivo ou R, de modo que as últimas
         duas partes interagem com esse canal para satisfazer a necessidade de
         interação com o externo. 
 
     \item A parte de entrada do meio R, a qual deve transferir as informações
         desse para dentro de M e C é chamada de entrada ou I. É de boa prática a
-        entrada passar os dados para dentro de M e nunca diretamenta para C. 
+        entrada passar os dados para dentro de M e nunca diretamente para C. 
 
     \item Similarmente, a parte de saída do meio R, a qual deve transferir as
         informações de M e C para o meio R, é chamada de saída ou O. É de boa
@@ -84,7 +84,7 @@ Para se explicar a estrutura do IAS, deve-se atentar a 5 partes principais:
 Assim, resumidamente, temos a memória principal, que armazena dados e
 instruções; a unidade lógica e aritmética (ALU), que opera os binários; a
 unidade de controle, que interpreta e executa instruções e, por fim, o
-equipmaneto de saída (E/S), que conecta o meio interno ao meio externo do
+equipamento de saída (E/S), que conecta o meio interno ao meio externo do
 computador.
 
 \subsubsection{Endereçamento de memória}
@@ -114,10 +114,10 @@ necessitar maior quantidade de componentes, e por consequência, aumento de
 calor.
 
 \subsection{RISC}
-Em contrapartida ao CISC, existe o paragima RISC (\textit{Reduced Instruction
+Em contrapartida ao CISC, existe o paradigma RISC (\textit{Reduced Instruction
 Set Computer}). Um projeto RISC tem como princípio implementar um pequeno número
 mínimo de instruções simples, que em sua maioria são executadas em apenas um
-cíclo de máquina.
+ciclo de máquina.
 
 Como esperado, processadores RISCs são mais fáceis de serem implementados e
 produzidos, gastando menor quantidade de componentes e melhorando a eficiência
@@ -133,13 +133,13 @@ existiam até então em \textit{mainframes}. A arquitetura teve seu surgimento
 junto ao processador 8086 em 1978, que foi introduzido como uma extensão de 16
 bits ao famoso 8080, primeiro microprocessador de propósito geral.
 
-A linhagem de processadores x86 continou a evoluir, levando ao aparecimento do
+A linhagem de processadores x86 continuou a evoluir, levando ao aparecimento do
 80286, 80386 e 80486, cada qual incrementando novas instruções na arquitetura,
 além de melhorar aspectos de organização utilizando a rápida evolução da
 microeletrônica. O 80286 possibilitou a ampliação do número de memória
 endereçável para 16 MB, ao invés de 1 MB que seu antecessor era capaz. Já o
 80386 foi o primeiro processador de 32 bits, trazendo muitas melhorias em
-comparação ao 80236, o que incluu o suporte a multitarefas. Sucessivamente, o
+comparação ao 80236, o que inclui o suporte a multitarefas. Sucessivamente, o
 80486 incrementou uma nova tecnologia de cache junto de uma avançada
 \textit{pipelining} de instruções, além de também adicionar um coprocessador
 para instruções matemáticas complexas.
@@ -147,7 +147,7 @@ para instruções matemáticas complexas.
 Já entrando na quinta geração de processadores, surge o Pentium, que sucede o
 80486 adicionando tecnologia superescalar, que é uma forma de paralelismo a
 nível de instrução utilizando múltiplas unidades de execução. Seguindo para o
-Pentium Pro, este continuou a implementação de tecnicas multiescalares,
+Pentium Pro, este continuou a implementação de técnicas multi-escalares,
 incluindo análise do fluxo de dados, execução especulativa, entre outras.
 
 Com os desktops se tornando cada vez mais comuns e novas necessidades surgindo,
@@ -156,7 +156,7 @@ levando ao aparecimento de instruções orientadas ao processamento de multimíd
 O Pentium II surge incorporando a tecnologia MMX da Intel no Pentium Pro. Em
 seguida, o Pentium III trouxe muitas outras novas instruções de ponto flutuante,
 que melhoravam muito a performance em algumas aplicações específicas. O ultimo
-proessador da linha foi o Pentium 4, que apenas melhorou algumas tecnologias
+processador da linha foi o Pentium 4, que apenas melhorou algumas tecnologias
 utilizadas em seu antecessor.
 
 Após a virada do século, o desenvolvimento de novos processadores acabou mudando
@@ -164,16 +164,16 @@ de rumo, quando foi alcançado limites práticos para o aumento do \textit{clock
 por exemplo. Como não era possível mais aproveitar os avanços da miniaturização
 para melhorar a performance, os processadores passaram a serem multiplicados em
 diferentes núcleos. O primeiro \textit{dual core} x86 foi o Intel Core.
-Posteriormente o Intel Core foi extendido a 64 bits, surgindo posteriormente
-variantes como o Core 2 Quad, com quatro núcelos. Outra tecnologia importante
-adicionada à linha Core 2 foram as AVE, que possuiam instruções de grande
+Posteriormente o Intel Core foi estendido a 64 bits, surgindo posteriormente
+variantes como o Core 2 Quad, com quatro nucelos. Outra tecnologia importante
+adicionada à linha Core 2 foram as AVE, que possuíam instruções de grande
 tamanho para processamento eficiente de vetores.
 
 Por mais que a arquitetura x86 seja antiga, ela se mostrou em constante
 evolução, o que inclui sempre a adição de novos recursos e instruções,
 aproveitando os avanços da microeletrônica para mudanças na organização. Ainda
 assim, processadores recentes possuem retrocompatibilidade com programas
-antigos, devido ao fato da arquitetura ter evoluido sem alterar instruções já
+antigos, devido ao fato da arquitetura ter evoluído sem alterar instruções já
 existentes, o que colaborou para a manutenção da popularidade da arquitetura.
 
 \subsection{Sistemas embarcados}
@@ -211,7 +211,7 @@ embarcados podem ser descritas:
 
     \item Software possui uma função e objetivo fixo e bem definido.
 
-    \item Eficiencia é de extrema importancia, o que inclui performance,
+    \item Eficiência é de extrema importância, o que inclui performance,
         baixo consumo de energia, espaço e consumo de memória.
 \end{itemize}
 
@@ -226,7 +226,7 @@ componentes aumentando seu conjunto de instruções, memória e núcleos, os
 microcontroladores o usam para integrar todos os outros componentes de um
 computador em um único chip, o que inclui memória RAM, ROM, \textit{clock} e
 unidade de controle de entrada e saída. Obviamente, os elementos de um
-microcontrolador são mais simples, porém possuem alta eficiencia energética e
+microcontrolador são mais simples, porém possuem alta eficiência energética e
 baixíssimo custo.
 
 \begin{figure}[h]
@@ -239,9 +239,9 @@ baixíssimo custo.
 O termo IoT (\textit{Internet of Things}) é utilizado para denotar o fenômeno de
 expansão da rede de comunicação entre dispositivos embarcados "inteligentes". O
 fenômeno vem se tornando cada vez mais popular e denota a inclusão de sistemas
-microcontrolados em objetos dos mais variados tipos, como geladeira, lampadas e
+micro-controlados em objetos dos mais variados tipos, como geladeira, lampadas e
 torradeiras. a IoT é responsável pela integração dos possíveis objetos para
-formar um grande sistema automatizável. Um exemplo clássico de IoT são os
+formar um grande sistema automatizáveis. Um exemplo clássico de IoT são os
 sistemas de automação residencial.
 
 Uma caraterística importante dos sistemas IoT é o caráter da conexão dos seus
@@ -249,6 +249,92 @@ principais dispositivos, definida por baixa largura de banda, baixa repetição 
 captura e uso de dados.
 
 \subsection{Arquitetura ARM} 
+A família de arquitetura ARM é caracterizada por uma grande gama de
+microprocessadores e microcontroladores, sendo a exemplar mais popular do tipo
+RISC. Diferente da arquitetura x86, a empresa por trás da arquitetura ARM não
+fabrica processadores, mas sim os projeta, além de projetar também a arquitetura
+em si, vendendo licenças de fabricação às fabricantes.
+
+Como consequência do paradigma RISC, os chips ARM possuem tamanho reduzido e
+baixíssimo consumo energético, principalmente pela pequena quantidade de
+componentes necessários. Essas características levam os microprocessadores ARM a
+dominarem o mercado de dispositivos móveis, como o de \textit{smartphones}.
+
+O conjunto de instruções ARM é desenvolvido para eficiente implementação e
+execução. Todas instruções são de 32 bits e seguem formato regular, permitindo
+sua implementação em uma vasta gama de produtos. Além disso, ainda existe o
+conjunto de instruções \textit{Thumb}, que é um subconjunto do conjunto de
+instruções ARM tradicionais, cujas instruções são implementadas em 16 bits para
+melhor performance e menor largura de barramento de memória, permitindo
+consequentemente melhor densidade de código.
+
+Talvez uma das principais famílias de microprocessadores ARM sejam os da linha
+Cortex, que são nomeados de acordo com suas respectivas aplicações. O Cortex-A
+e o Cortex-A50 são processadores de aplicação, ou seja, são capazes de rodar sistemas
+operacionais completos, sendo utilizados em smartphones, por exemplo. Já o
+Cortex-R é projetado para aplicações embarcadas de baixa latência, contendo
+otimizações tanto em seu conjunto de instrução quanto sua organização para
+melhor desempenho. Por ultimo, existe a série Cortex-M, que é desenvolvida
+princialmente para o domínio de microcontroladores.
+
+O ARM Cortex-M3 por exemplo, que é utilizado para microcontroladores de 16 e 32
+bits, contando com funcionalidades de \textit{debug} e \textit{trace}. Uma
+diferença relatável do Cortex-M3 é que ele utiliza barramentos diferentes para
+instruções e dados, que difere do IAS, por exemplo, e que torna possível ler
+ambos barramentos ao mesmo tempo, oferecendo paralelismo. Além disso, possui um
+decodificador \textit{Thumb}, uma avançada ULA (Unidade Lógica e Aritmética)
+com suporte à multiplicação e divisão, controle logico e interface com os outros
+componentes do processador.
+
+Além do "núcleo" do processador, o Cortex-M3 também possui alguns componentes,
+dos quais:
+
+\begin{itemize}
+    \item \textbf{NVIC:} Provê gerenciamento de interrupções e controle
+        energético.
+    \item \textbf{ETM:} Componente de depuração que permite reconstrução da
+        execução de programas
+    \item \textbf{Debug access port (DAP):} Interface para depuração externa
+    \item \textbf{Debug logic:} Fornece funcionalidades básicas de depuração.
+    \item \textbf{ICode interface:} Pega as instruções do espaço de memória de
+        código
+    \item \textbf{SRAM \& peripheral interface:} Interface de leitura e escrita
+        de memória e dispositivos externos.
+    \item \textbf{Bus matrix:} Conecta o núcleo e a interface de depuração com
+        o barramento externo do microcontrolador.
+    \item \textbf{Memory protection unit:} Responsável pela proteção de dados
+        críticos do sistema operacional. 
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{cortex.png}
+    \caption{Típica estrutura de um chip de um microcontrolador baseado no
+    Cortex-M3.}
+\end{figure}
+
+Já um microcontrolador baseado no Cortex-M3, possui:
+
+\begin{itemize}
+    \item \textbf{Core and memory:} Região que inclui o processador, RAM
+        estática, memória \textit{flash} e interface de depuração.
+    \item \textbf{Parallel I/O ports:} Portas paralelas de I/O configuráveis.
+    \item \textbf{Serial interfaces:} Suporte para I/O serial.
+    \item \textbf{Analog interfaces:} Conversores A/D e D/A para suporte a
+        sensores e atuadores.
+    \item \textbf{Timers and triggers:} Responsável por acompanhar eventos de
+        contagem e manipulação de tempo, além de gerar formas de ondas e
+        gatilhar ações temporais em periféricos.
+    \item \textbf{Clock management:} Controla os osciladores e relógios do chip.
+    \item \textbf{Energy management:} Gerencia os modos de operação em baixa
+        energia.
+    \item \textbf{Security:} Implementação do padrão AES \textit{Advanced
+        Encryption Standard}.
+    \item \textbf{32-bit bus:} Barramento que conecta todos os componentes do
+        chip.
+    \item \textbf{Peripheral bus:} Barramento que permite interconexão dos
+        módulos sem envolver o processador.
+\end{itemize}
 
 \subsection{Computação em Nuvem}
 Com o avanço das tecnologias de telecomunicações, o que envolve as redes de
@@ -263,7 +349,7 @@ necessário para provisionamento e manutenção de uma infraestrutura de TI para
 atividades que envolvem produtos finais pertencentes às camadas mais superiores
 da stack de software\footnote{O termo stack de software é utilizado para denotar
 os diferentes subsistemas de software que compõe uma plataforma completa.}, pois
-esse passsa a ser terceirizado a um provedor de nuvem (CSP, do inglês
+esse passa a ser terceirizado a um provedor de nuvem (CSP, do inglês
 \textit{Cloud Service Provider}). Os serviços nuvem oferecem portanto uma menor
 complexidade para seus usuários, bem como maior escalabilidade.
 
