@@ -1,7 +1,10 @@
 \documentclass{article}
+
 \usepackage[a4paper, margin=1in]{geometry}
 \usepackage{graphicx}
 \usepackage{caption}
+\usepackage{float}
+
 \graphicspath{ {./images/} }
 \captionsetup{font=small}
 
@@ -27,16 +30,16 @@
 \subsection{Primeira geração: Arquitetura de Von Neumann}
 A primeira geração de computadores é conhecida pelo uso das válvulas para
 representar os elementos lógicos digitais e a memória. E também, o
-\textit{conceito de programa armazenado}, atribuída ao matemático John Von
+\textbf{conceito de programa armazenado}, atribuída ao matemático John Von
 Neumann, que surgiu para a construção do computador EDVAC (Eletronic Discrete
 Variable Computer), mas foi principalmente discutido no desenvolvimento do
 computador IAS, o qual é um protótipo para quase todos os computadores de
 propósito geral de hoje em dia.
 
 \begin{figure}[h]
-    \caption{Figura 1: Estrutura do IAS.}
     \centering
-    \includegraphics[width=0.58\textwidth]{ias.png}
+    \includegraphics[width=0.65\textwidth]{ias.png}
+    \caption{Estrutura do IAS.}
 \end{figure}
 
 Para se explicar a estrutura do IAS, deve-se atentar a 5 partes principais:
@@ -104,10 +107,10 @@ palavra de número e palavra de instrução.
             endereço de memória.
 \end{itemize}
 
-\begin{figure}[h]
-   \caption{Figura 2: Tipos de palavras.}\textbf{}
+\begin{figure}[H]
    \centering
-  \includegraphics[width=0.75\textwidth]{palavras.png}
+   \includegraphics[width=0.75\textwidth]{palavras.png}
+   \caption{Tipos de palavras de memória.}
 \end{figure}
 
 \subsubsection{Registradores}
@@ -115,19 +118,19 @@ Passando para as unidades menores do computador IAS, tem-se os locais de
 armazenamento da unidade de controle e da ALU, chamados de registradores.
 
 \begin{itemize}
-        \item Registrador de buffer de memória (MBR): é o local onde permanece
+    \item \textbf{Registrador de buffer de memória (MBR):} é o local onde permanece
             a palavra a ser armazenada na memória ou enviada à unidade E/S,
             como também é o local para receber a palavra a partir da E/S ou a
             partir da memória.
-        \item Registrador de endereço de memória (MAR): local que contém o
+        \item \textbf{Registrador de endereço de memória (MAR):} local que contém o
             endereço da memória da palavra a ser escrito ou lido pelo MBR.
-        \item Registrador de instruções (IR): contém o opcode de 8 bits da
+        \item \textbf{Registrador de instruções (IR):} contém o opcode de 8 bits da
             instrução que está sendo executada.
-        \item Registrador de buffer de instrução (IBR): mantém temporariamente
+        \item \textbf{Registrador de buffer de instrução (IBR):} mantém temporariamente
             a instrução da direita da palavra da memória.
-        \item Contador do programa (PC): mantém o próximo par de instruções a
+        \item \textbf{Contador do programa (PC):} mantém o próximo par de instruções a
             ser buscado na memória.
-        \item Acumulador (AC) e quociente-multiplicador (MQ): registradores
+        \item \textbf{Acumulador (AC) e quociente-multiplicador (MQ):} registradores
             usados para realizar as operações da ALU, sendo o AC o que mantém
             os bits mais significativos e o MQ os bits menos significativos.
 \end{itemize}
