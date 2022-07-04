@@ -38,12 +38,12 @@ execução logica de um programa. Organização de computador refere-se as unida
 operacionais e suas interconexões que percebam as especificações de
 arquitetura. 
 
-Por exemplo, e uma questão de projeto de arquitetura se um computador terá uma
-instrução de multiplicação. E uma questão de organização se essa instrução será
-implementada por uma unidade de multiplicação especial ou por um mecanismo que
-faça uso repetido da unidade de adição do sistema. A decisão organizacional
-pode ser baseada na previsão da frequência de uso da instrução de
-multiplicação, na velocidade relativa das duas técnicas e no custo e tamanho
+Por exemplo, é uma questão de projeto de arquitetura se um processador terá uma
+instrução de multiplicação ou não, enquanto é uma questão de organização se essa
+instrução será implementada por uma unidade de multiplicação especial ou por um
+mecanismo que faça uso repetido da unidade de adição do sistema. A decisão
+organizacional pode ser baseada na previsão da frequência de uso da instrução
+de multiplicação, na velocidade relativa das duas técnicas e no custo e tamanho
 físico de uma unidade de multiplicação especial.
 
 Historicamente, e ainda hoje, a distinção entre arquitetura e organização tem
@@ -62,29 +62,31 @@ mais poderosas e mais complexas. Geralmente, há menor requisito para
 compatibilidade de geração a geração para essas máquinas menores.
 
 \subsection{Estruturas e Funções}
-Um sistema hierárquico e um conjunto de subsistemas inter-relacionados, cada um
-deles, por sua vez, hierárquico em estrutura até alcançarmos algum nível mais
-baixo de subsistema elementar. A natureza hierárquica dos sistemas complexos e
-essencial para seu projeto e sua descrição. O projetista só precisa lidar com
-um nível particular do sistema de cada vez. Em cada nível, o sistema consiste
-em um conjunto de componentes e suas inter-relações. O comportamento em cada
-nível depende somente de uma caracterização simplificada e resumida do sistema,
-no próximo nível mais baixo. Em cada nível, o projetista está interessado na
-estrutura e na função:
+Um sistema hierárquico é um conjunto de subsistemas inter-relacionados, cada
+qual responsável por implementar uma função necessária à camada superior,
+formando um sistema final dividido em camadas de abstrações. A natureza
+hierárquica dos sistemas complexos é essencial para seu projeto e sua
+descrição. O projetista só precisa lidar com um nível particular do sistema de
+cada vez. O comportamento em cada nível depende somente de uma
+caracterização simplificada e resumida do sistema do próximo nível mais baixo.
+Em cada nível, o projetista está interessado em sua estrutura e função:
 
 \begin{itemize}
-    \item \textbf{Estrutura:} o modo como os componentes são inter-relacionados.
-    \item \textbf{Função:} a operação individual de cada componente como parte
+    \item \textbf{Estrutura:} O modo como os componentes são inter-relacionados.
+    \item \textbf{Função:} A operação individual de cada componente como parte
         da estrutura.
 \end{itemize}
 
 \subsubsection{Função}
+Em geral, existem apenas quatro funções básicas que um computador pode exercer,
+das quais:
+
 \begin{itemize}
-    \item \textbf{Processamento de dados:} os dados podem ter uma grande
-        variedade de formas, e a amplitude de exigências de processamento e
-        grande. Contudo, devemos ver que há somente poucos métodos fundamentais
-        ou tipos de processamento de dados.
-    \item \textbf{Armazenamento de dados:} mesmo que o computador esteja
+    \item \textbf{Processamento de dados:} Os dados podem ter uma grande
+        variedade de formas, e a amplitude de exigências de processamento é
+        grande. Contudo, existem poucos métodos fundamentais ou tipos de
+        processamento de dados.
+    \item \textbf{Armazenamento de dados:} Mesmo que o computador esteja
         processando dados na hora (isto é, os dados e são processados, e os
         resultados saem de imediato), o computador deve temporariamente
         armazenar pelo menos as peças de dados que estão sendo trabalhadas em
@@ -92,59 +94,48 @@ estrutura e na função:
         dados de curto prazo. Igualmente importante, o computador apresenta uma
         função de armazenamento de dados de longo prazo. Arquivos de dados são
         armazenados no computador para recuperação e atualização.
-    \item \textbf{Movimentação de dados:} o ambiente operacional do computador
+    \item \textbf{Movimentação de dados:} O ambiente operacional do computador
         consiste em dispositivos que servem como fontes ou destinos de dados.
         Quando dados são recebidos de ou entregues a um dispositivo que é
-        diretamente conectado ao computador, o processo e conhecido como
-        entrada-saída (E/S ou, do inglês, input- -output — I/O), e o
-        dispositivo e referido como um periférico. Quando os dados são
+        diretamente conectado ao computador, o processo é conhecido como
+        entrada-saída (E/S ou, do inglês, \textit{input-output} -- I/O), e o
+        dispositivo é referido como um periférico. Quando os dados são
         movimentados por longas distancias, a ou de um dispositivo remoto, o
         processo e conhecido como comunicações de dados.
-    \item \textbf{Controle:} dentro de um computador, uma unidade de controle
+    \item \textbf{Controle:} Dentro de um computador, uma unidade de controle
         gerencia os recursos do computador e orquestra o desempenho de suas
-        partes funcionais na resposta as instruções.
+        partes funcionais na resposta às instruções.
 \end{itemize}
 
-\subsubsection{Estrutura de um computador simples}
+\subsubsection{Estrutura de um computador}
+A estrutura de um computador de um único processador pode ser denotada pelos
+quatro principais componentes estruturais:
 \begin{itemize}
     \item \textbf{Unidade central de processamento (CPU — do inglês, Central
-        Processing Unit):} controla a operação de um computador e realiza suas
-        funções e processamento de dados; costuma ser referida simplesmente
-        como processador.
-    \item \textbf{Memória principal:} armazena dados.
-    \item \textbf{E/S:} move dados entre o computador e seu ambiente externo.
-    \item \textbf{Sistema de interconexão:} algum mecanismo que proporciona
-        comunicação entre CPU, memoria principal e E/S. Um exemplo comum de um
-        sistema de interconexão e o barramento do sistema, que consiste em um
-        número de fios condutores aos quais todos os outros componentes se
-        conectam.
+        Processing Unit):} Controla a operação de um computador e realiza suas
+        funções e processamento de dados.
+    \item \textbf{Memória principal:} Armazena dados.
+    \item \textbf{E/S:} Move dados entre o computador e seu ambiente externo.
+    \item \textbf{Sistema de interconexão:} Algum mecanismo que proporciona
+        comunicação entre CPU, memoria principal e E/S.
 \end{itemize}
 
 Podendo haver um ou mais de cada um dos componentes supracitados. Contudo, o
-mais complexo é o processador que pode ser descrito por:
+mais complexo é o processador (CPU) que pode ser descrito por:
 
 \begin{itemize}
-    \item \textbf{Processador:} trata-se de um pedaço físico de silício que
-        contém um ou mais cores. O processador é um componente do computador
-        que interpreta e executa instruções. Se um processador contém múltiplos
-        cores, ele e referido como um processador multicores.
-    \item \textbf{Unidade central de processamento (CPU):} e aquela parte do
-        computador que busca e executa instruções.
-    \item \textbf{Unidade de controle:} controla a operação da CPU e, portanto,
+    \item \textbf{Unidade de controle:} Controla a operação da CPU e, portanto,
         do computador.
-    \item \textbf{Registradores:} proporciona armazenagem interna na CPU.
-    \item \textbf{Interconexão da CPU:} alguns mecanismos que proporcionam
-        comunicação entre a unidade de controle, ALU e registradores.
-    \item \textbf{Core:} e uma unidade de processamento individual em um chip
-        de processador. Um core pode ser equivalente em funcionalidade a uma
-        CPU em um sistema de CPU única. Outras unidades de processamento
-        especializadas, como uma otimizada para operações de vetores ou de
-        matrizes, são também referidas como cores.
+    \item \textbf{Unidade Lógica e Aritmética (ULA):} Executa operações
+        lógicas e aritméticas.
+    \item \textbf{Registradores:} Proporciona o armazenamento interno da CPU.
+    \item \textbf{Interconexão da CPU:} Alguns mecanismos que proporcionam
+        comunicação entre a unidade de controle, ULA e registradores.
 \end{itemize}
 
-Outra característica proeminente de computadores contemporâneos e o uso de
+Outra característica proeminente de computadores contemporâneos é o uso de
 múltiplas camadas de memória, chamada de memória cache, entre o processador e a
-memória principal. Dizendo de forma simples, observamos que a memória cache e
+memória principal. Dizendo de forma simples, observamos que a memória cache é
 menor e mais rápida que a memória principal e é usada para deixar mais rápido o
 acesso da memória, ao colocar os dados na cache, a partir da memória principal,
 que provavelmente poderão ser usados em um futuro próximo. Um maior
@@ -153,104 +144,92 @@ cache, com o nível 1 (L1), mais próximo do core, e os níveis adicionais (L2, 
 e daí por diante), progressivamente mais longe do core. Nesse esquema, o nível
 n e menor e mais rápido que o nível n + 1.
 
+Descendo a um nível mais profundo, examinamos a estrutura interna de um único
+core de um processador exemplar da arquitetura \textit{Z/Architecture}:
+
 \begin{itemize}
-    \item Descendo a um nível mais profundo, examinamos a estrutura interna de
-        um único core de processador único. As principais subáreas dentro dessa
-        area do core são as seguintes:
+    \item \textbf{ISU (unidade de sequência de instrução — do inglês,
+        Instrucional Sequence Unit):} Determina a sequência na qual as
+        instruções são executadas em uma arquitetura superescalar.
 
-    \item ISU (unidade de sequência de instrução — do inglês, Instrucional
-        Sequence Unit): determina a sequência na qual as instruções sao
-        executadas no que é referido como arquitetura superescalar.
+    \item \textbf{IFU (unidade de busca de instrução — do inglês, Instruction
+        Fetch Unit):} Lógica para buscar instruções.
 
-    \item IFU (unidade de busca de instrução — do inglês, Instruction Fetch
-        Unit): logica para buscar instruções.
+    \item \textbf{IDU (unidade de decodificação de instrução — do inglês,
+        Instruction Decode Unit):} A IDU e alimentada por buffers IFU e é
+        responsável por analisar e decodificar todos os opcodes da
+        \textit{z/Architecture}.
 
-    \item IDU (unidade de decodificação de instrução — do inglês, Instruction
-        Decode Unit): a IDU e alimentada por buffers IFU e e responsável por
-        analisar e decodificar todos os opcodes de z/Arquitetura.
-
-    \item  LSU (unidade de load/store — do inglês, Load-Store Unit): a LSU
-        contém uma cache de dados 96 kB L1,1 e gerencia o trafego de dados
-        entre a cache de dados L2 e as unidades de execução funcionais. E
+    \item  \textbf{LSU (unidade de load/store — do inglês, Load-Store Unit):} A
+        LSU contém uma cache de dados 96 kB L1 e gerencia o trafego de dados
+        entre a cache de dados L2 e as unidades de execução funcionais. É
         responsável por lidar com todos os tipos de acessos de operandos de
-        todas as extensões, modos e formatos, como definido na z/Arquitetura.
+        todas as extensões, modos e formatos, como definido na
+        \textit{z/Architecture}.
 
-    \item XU (unidade de tradução — do inglês, Translation Unit): essa unidade
-        traduz os endereços lógicos a partir de instruções nos endereços
-        físicos na memória principal. A XU também contém o TLB (Translation
-        Lookaside Buffer) usado para incrementar o acesso da memória.
+    \item \textbf{XU (unidade de tradução — do inglês, Translation Unit):} A XU
+        traduz os endereços lógicos a partir de instruções nos endereços físicos
+        na memória principal. Além de também conter o TLB (Translation Lookaside
+        Buffer),usado para incrementar o acesso da memória.
 
-    \item FXU (unidade de ponto fixo — do inglês, Fixed Point Unit): a FXU
-        executa as operações aritmeticas de ponto fixo.
+    \item \textbf{FXU (unidade de ponto fixo — do inglês, Fixed Point Unit):} A
+        FXU executa as operações aritméticas de ponto fixo.
 
-    \item BFU (unidade de ponto flutuante binário — do inglês, Binary
-        Floating-point Unit): a BFU lida com todas as operações de ponto
-        flutuante binário e hexadecimal, bem como com operações de
-        multiplicação de ponto fixo.
+    \item \textbf{BFU (unidade de ponto flutuante binário — do inglês, Binary
+        Floating-point Unit):} A BFU lida com todas as operações de ponto
+        flutuante binário e hexadecimal, bem como com operações de multiplicação
+        de ponto fixo.
 
-    \item DFU (unidade de ponto flutuante decimal — do inglês, Decimal
-        Floating-point Unit): a DFU lida tanto com as operações de ponto fixo
-        como com as de ponto flutuante sobre os números que são armazenados
-        como dígitos decimais.
+    \item \textbf{DFU (unidade de ponto flutuante decimal — do inglês, Decimal
+        Floating-point Unit):} A DFU lida tanto com as operações de ponto fixo
+        como com as de ponto flutuante sobre os números que são armazenados como
+        dígitos decimais.
 
-    \item RU (unidade de recuperação — do inglês, Recovery Unit): a RU mantem a
-        cópia do estado completo do sistema que inclui todos os registradores,
-        coleta sinais de falha de hardware e gerência as ações de recuperação
-        do hardware.
+    \item \textbf{RU (unidade de recuperação — do inglês, Recovery Unit):} A RU
+        mantém a cópia do estado completo do sistema que inclui todos os
+        registradores, coleta sinais de falha de hardware e gerencia as ações de
+        recuperação do hardware.
 
-    \item COP (coprocessador dedicado — do inglês, Dedicated Co-Processor): o
-        COP e responsável pela compressão de dados e funções de criptografia
-        para cada core.
+    \item \textbf{COP (coprocessador dedicado — do inglês, Dedicated
+        Co-Processor):} O COP é responsável pela compressão de dados e funções
+        de criptografia para cada core.
 
-    \item I-cache: esta e uma cache de instrução 64 kB L1 que permite que a IFU
-        pre-busque instruções antes que sejam necessárias.
+    \item \textbf{I-cache:} esta e uma cache de instrução 64 kB L1 que permite
+        que a IFU pré busque instruções antes que sejam necessárias.
 
-    \item Controle L2: esta e a lógica de controle que gerencia o trafego
-        através de duas caches L2.
+    \item \textbf{Controle L2:} Esta é a lógica de controle que gerencia o
+        tráfego através de duas caches L2.
 
-    \item Dados-L2: trata-se de uma cache de dados 1 MB L2 para todo o trafego
-        de memória diferente das instruções.
+    \item \textbf{Dados-L2:} Trata-se de uma cache de dados de 1 MB L2 para todo o
+        trafego de memória diferente das instruções.
 
-    \item Instr-L2: e uma cache de instrução 1 MB L2. Conforme progredimos pelo
-        livro, os conceitos introduzidos na seção vão se tornando claros.
+    \item \textbf{Instr-L2:} É uma cache de instrução 1 MB L2.
 \end{itemize}
 
-A maioria dos computadores, inclusive os computadores incorporados a
-smartphones e tablets, além dos computadores pessoais, laptops e estacoes de
-trabalho, e hospedada na placa-mãe. Uma placa de circuito impresso (PCB — do
-inglês, Printed Circuit Board) e uma placa rígida e plana que mantem e
-interconecta chips e outros componentes eletrônicos. A placa e composta por
-camadas, geralmente de duas a dez, que interconectam os componentes por
-caminhos de cobre que são gravados na placa. A placa de circuito impresso
-principal em um computador e chamada de placa de sistema ou placa-me, ao passo
-que as menores que se conectam nas aberturas da placa principal são chamadas de
-placas de expansão.
+A maioria dos componentes do computadores são interligados em uma placa-mãe, que
+é uma placa de circuito impresso (PCB -- do inglês, Printed Circuit Board). A
+placa é composta por camadas, geralmente de duas a dez, que interconectam os
+componentes por trilhas de cobre que são gravados na placa. A placa também
+oferece suporte a hardwares externos através de placas de expansões.
 
-Os elementos mais proeminentes na placa-mae são os chips. Um chip e um pedaço
+Os elementos mais proeminentes que constituem a placa-mãe são os chips. Um chip é um pedaço
 único de material semicondutor, em geral de silício, no qual os circuitos
-eletrônicos e portas logicas são fabricados. O produto resultante e referido
-como um circuito integrado. A placa-me contém um slot ou um soquete para o chip
-do processador, o que geralmente contem múltiplos cores individuais, que e
-conhecido como processador multicore. Ha também slots para os chips da memória,
-chips de controlador E/S e outros componentes-chave do computador. Para
+eletrônicos e portas logicas são fabricados. O produto resultante é referido
+como um circuito integrado (CI). A placa-mãe contém um slot ou um soquete para o chip
+do processador. Ha também slots para os chips da memória,
+chips de controlador E/S e outros componentes chave do computador. Para
 computadores desktop, os slots de expansão permitem a inclusão de mais
 componentes na placa de expansão. Assim, uma placa-mãe moderna conecta somente
 poucos componentes individuais, com cada chip contendo de alguns milhares até
-centenas de milhões de transistores. 	O core também contém uma cache L1,
-dividida entre uma cache de instrução (I-cache) que e usada para a
-transferência de instruções para e de uma memória principal, e uma cache de
-dados L1, para a transferência de operandos e resultados. Geralmente, os chips
-de processador atuais também incluem uma cache L2 como parte do core. Em alguns
-casos, essa cache é dividida entre instrução e caches de dados, embora uma
-cache L2 única e combinada também seja usada.
+centenas de milhões de transistores.
 
-Outros componentes fora os soquetes do processador que estão no computador são:
+Outros componentes da placa mãe são:
 
 \begin{itemize}
     \item Slots do PCI-express para adaptador de vídeo de alta
-        qualidade e para periféricos adicionais.
+       performance e para periféricos adicionais.
 
-    \item Controladores Ethernet e portas Ethernet para conexoes de rede.
+    \item Controladores Ethernet e portas Ethernet para conexões de rede.
         
     \item Soquetes USB para dispositivos periféricos.
 
@@ -326,7 +305,7 @@ Para se explicar a estrutura do IAS, deve-se atentar a 5 partes principais:
 Assim, resumidamente, temos a memória principal, que armazena dados e
 instruções; a unidade lógica e aritmética (ALU), que opera os binários; a
 unidade de controle, que interpreta e executa instruções e, por fim, o
-equipmaneto de saída (E/S), que conecta o meio interno ao meio externo do
+equipamento de saída (E/S), que conecta o meio interno ao meio externo do
 computador.
 
 Como já antes dito, o modelo de IAS reflete em grande parte dos computadores
