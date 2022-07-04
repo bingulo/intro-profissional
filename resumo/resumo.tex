@@ -353,7 +353,17 @@ armazenamento da unidade de controle e da ALU, chamados de registradores.
         os bits mais significativos e o MQ os bits menos significativos.
 \end{itemize}
 
-\subsubsection{Ciclos do IAS}
+\subsubsection{Ciclo do IAS}
+	O IAS funciona a partir de um clico de vida, no qual cada alteração na memória ocorre. O ciclo separa-se principalmente em dois grandes blocos: ciclo de busca e ciclo de execução. \\
+	O ciclo de busca dedica-se na seleção e manipulação dos endereços de memória, ou seja, localizar qual memória dever ser operada durante o ciclo. Nesse estágio, o opcode é carregado no IR e no MAR e interpretado no IBR ou MBR e, em seguida, armazenado novamente no IBR, IR ou MAR.
+	Posteriormente ao código de operação estar no IR, o ciclo de execucação é iniciado, deixando ao circuito de controle, que interpretea e executa a instrução , mover os dados ou passar para ALU a operação a ser realizada.
+
+\begin{figure}[h]
+	\caption{Figura 3: Ciclo do IAS}\textbf{}
+	\centering
+	\includegraphics[width=0.75\textwidth]{cicloDoIAS.png}
+\end{figure}
+
 \subsubsection{Conjunto de instruções IAS}
 \subsection{Segunda geração: Transístores}
 \subsection{Terceira geração: Circuitos Integrados}
