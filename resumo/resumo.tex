@@ -247,8 +247,8 @@ Outros componentes da placa mãe são:
 \section{Evolução histórica}
 \subsection{Primeira geração: Arquitetura de Von Neumann}
 A primeira geração de computadores é conhecida pelo uso das válvulas para
-representar os elementos lógicos digitais e a memória. E também, o
-\textbf{conceito de programa armazenado}, atribuída ao matemático John Von
+representar os elementos lógicos digitais e a memória, além do
+conceito de \textbf{programa armazenado}, atribuída ao matemático John Von
 Neumann, que surgiu para a construção do computador EDVAC (Eletronic Discrete
 Variable Computer), mas foi principalmente discutido no desenvolvimento do
 computador IAS, o qual é um protótipo para quase todos os computadores de
@@ -260,38 +260,45 @@ propósito geral de hoje em dia.
     \caption{Estrutura do IAS.}
 \end{figure}
 
-Para se explicar a estrutura do IAS, deve-se atentar a 5 partes principais:
+Para se explicar a estrutura do IAS, deve-se atentar a 5 aspectos estruturais
+principais:
 
 \begin{enumerate}
-    \item Um computador terá de ser capaz de executar as operações elementares
+    \item O computador terá de ser capaz de executar as operações elementares
         básicas (adição, subtração, multiplicação, divisão). Normalmente, para
         essas funções são criadas unidades específicas para tais, comportadas em
         uma unidade maior centralizadora denominada CA ou unidade lógica e
-        aritmética.
+        aritmética (ULA).
 
-    \item Um computador terá de ser capaz de dar sequenciamento adequado as suas
-        operações, instruções e as instruções de controle (comandos que regem o
-        próprio sequenciamento do computador). Á essas unidades é denominada uma
-        unidade central chamada CC ou controle central.
+    \item O computador terá de ser capaz de dar sequenciamento adequado às suas
+        operações, instruções e às instruções de controle (comandos que regem o
+        próprio sequenciamento do computador). A unidade responsável por tal é
+        denominada por CC *ou controle central).
+\end{enumerate}
 
-        As partes 1) e 2) juntas são chamadas de C. 
+        A unidade que fica resposável pelas partes anteriores em conjunto é
+        chamada de C. 
 
-    \item Um computador terá a necessidade de processar sequências longas de
-        operações, que, geralmente, não conseguem ser efetuadas em uma única
-        leva de comandos. Logo, requer-se uma unidade que armazene dados por
-        períodos duráveis para resolver problemas mais complexos, como cálculos.
-
-        Essa unidade é denominada M ou memória.
+\begin{enumerate}
+        \setcounter{enumi}{2}
+    \item O computador terá a necessidade de processar sequências longas de
+        operações que, geralmente, não conseguem ser efetuadas em uma única
+        leva de comandos. Logo, uma unidade que armazene dados por períodos
+        duráveis é necessária para resolver problemas mais complexos, como
+        cálculos. Essa unidade é denominada M ou memória.
+\end{enumerate}
 
         Analogamente ao funcionamento do corpo humano, essas três partes podem
-        ser comparadas a parte cognitiva do corpo. Ou seja, a unidade lógica e
-        aritmética, o controle central e a memória são o conjunto pensante do
-        computador. Mas, assim como o corpo humano, se faz necessário a
+        ser caracterizadas pela parte cognitiva. Ou seja, a unidade lógica e
+        aritmética, o controle central e a memória são o "cérebro" do
+        computador. Mas assim como o corpo humano, se faz necessária a
         comunicação com o mundo externo, tal é feito por um canal denominado
         meio de gravação de saída do dispositivo ou R, de modo que as últimas
         duas partes interagem com esse canal para satisfazer a necessidade de
-        interação com o externo. 
+        interação externa.
 
+\begin{enumerate}
+        \setcounter{enumi}{3}
     \item A parte de entrada do meio R, a qual deve transferir as informações
         desse para dentro de M e C é chamada de entrada ou I. É de boa prática a
         entrada passar os dados para dentro de M e nunca diretamente para C. 
@@ -299,30 +306,26 @@ Para se explicar a estrutura do IAS, deve-se atentar a 5 partes principais:
     \item Similarmente, a parte de saída do meio R, a qual deve transferir as
         informações de M e C para o meio R, é chamada de saída ou O. É de boa
         prática, também, a saída passar de M para R, assim, nunca diretamente
-        por C. 
+        de C. 
 \end{enumerate}
 
-Assim, resumidamente, temos a memória principal, que armazena dados e
-instruções; a unidade lógica e aritmética (ALU), que opera os binários; a
-unidade de controle, que interpreta e executa instruções e, por fim, o
-equipamento de saída (E/S), que conecta o meio interno ao meio externo do
-computador.
-
-Como já antes dito, o modelo de IAS reflete em grande parte dos computadores
-atuais, por isso sua importância no mundo da computação.
+Resumidamente, temos a memória principal, que armazena dados e instruções; a
+unidade lógica e aritmética (ULA), que opera os binários; a unidade de
+controle, que interpreta e executa instruções e, por fim, o equipamento de
+entrada e saída (E/S), que conecta o meio interno do computador ao externo.
 
 \subsubsection{Endereçamento de memória}
-O IAS possui 4.096 locais de armazenamento chamados de palavras, sendo esses
-dados ou instruções, cada um com 40 bits. As palavras são dividas em duas:
+O IAS possui 4.096 locais de armazenamento chamados de palavras, sendo estes
+dados ou instruções, cada qual com 40 bits de tamanho. As palavras são dividas em duas:
 palavra de número e palavra de instrução.
 
 \begin{itemize}
-        \item Palavra de número: contém um bit de sinal e outros 39 de
-            armazenamento para o número. 
-        \item Palavra de instrução: pode conter duas instruções de 20 bits,
-            cada uma contendo um opcode de 8 bits - referência que um
-            processador possui para uma determinada instrução - e 12 bits de
-            endereço de memória.
+    \item \textbf{Palavra de número:} Contém um bit de sinal e outros 39 de
+        armazenamento para o número. 
+    \item \textbf{Palavra de instrução:} Pode conter duas instruções de 20
+        bits, cada uma contendo um opcode de 8 bits - referência que um
+        processador possui para uma determinada instrução - e 12 bits de
+        endereço de memória.
 \end{itemize}
 
 \begin{figure}[H]
@@ -333,38 +336,53 @@ palavra de número e palavra de instrução.
 
 \subsubsection{Registradores}
 Passando para as unidades menores do computador IAS, tem-se os locais de
-armazenamento da unidade de controle e da ALU, chamados de registradores.
+armazenamento da unidade de controle e da ALU, chamados de registradores,
+classificados em:
 
 \begin{itemize}
-    \item \textbf{Registrador de buffer de memória (MBR):} é o local onde permanece
-        a palavra a ser armazenada na memória ou enviada à unidade E/S,
-        como também é o local para receber a palavra a partir da E/S ou a
-        partir da memória.
-    \item \textbf{Registrador de endereço de memória (MAR):} local que contém o
+    \item \textbf{Registrador de buffer de memória (MBR):} É o local onde permanece
+        a palavra logo após ser lida ou antes desta ser escrita na memória ou
+        em algum dispositivo de E/S.
+    \item \textbf{Registrador de endereço de memória (MAR):} Local que contém o
         endereço da memória da palavra a ser escrito ou lido pelo MBR.
-    \item \textbf{Registrador de instruções (IR):} contém o opcode de 8 bits da
+    \item \textbf{Registrador de instruções (IR):} Contém o opcode de 8 bits da
         instrução que está sendo executada.
-    \item \textbf{Registrador de buffer de instrução (IBR):} mantém temporariamente
+    \item \textbf{Registrador de buffer de instrução (IBR):} Mantém temporariamente
         a instrução da direita da palavra da memória.
-    \item \textbf{Contador do programa (PC):} mantém o próximo par de instruções a
+    \item \textbf{Contador do programa (PC):} Mantém o próximo par de instruções a
         ser buscado na memória.
-    \item \textbf{Acumulador (AC) e quociente-multiplicador (MQ):} registradores
-        usados para realizar as operações da ALU, sendo o AC o que mantém
+    \item \textbf{Acumulador (AC) e quociente-multiplicador (MQ):} Registradores
+        usados para realizar as operações da ULA, sendo o AC o que mantém
         os bits mais significativos e o MQ os bits menos significativos.
 \end{itemize}
 
 \subsubsection{Ciclo do IAS}
-	O IAS funciona a partir de um clico de vida, no qual cada alteração na memória ocorre. O ciclo separa-se principalmente em dois grandes blocos: ciclo de busca e ciclo de execução. \\
-	O ciclo de busca dedica-se na seleção e manipulação dos endereços de memória, ou seja, localizar qual memória dever ser operada durante o ciclo. Nesse estágio, o opcode é carregado no IR e no MAR e interpretado no IBR ou MBR e, em seguida, armazenado novamente no IBR, IR ou MAR.
-	Posteriormente ao código de operação estar no IR, o ciclo de execucação é iniciado, deixando ao circuito de controle, que interpretea e executa a instrução , mover os dados ou passar para ALU a operação a ser realizada.
+O IAS funciona a partir de um clico de vida, no qual cada alteração na memória
+ocorre. O ciclo separa-se principalmente em dois grandes blocos: ciclo de busca
+e ciclo de execução.
 
-\begin{figure}[h]
-	\caption{Figura 3: Ciclo do IAS}\textbf{}
+O ciclo de busca dedica-se na seleção e manipulação dos endereços de memória,
+ou seja, localizar qual endereço de memória deve ser operado durante o ciclo.
+Nesse estágio, o opcode é carregado no IR e no MAR e interpretado no IBR ou MBR
+e, em seguida, armazenado novamente no IBR, IR ou MAR.
+
+Posteriormente ao código de operação estar no IR, o ciclo de execução é
+iniciado, deixando ao circuito de controle, que interpretará e executa a
+instrução, mover os dados ou passar para ALU a operação a ser realizada.
+
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.75\textwidth]{cicloDoIAS.png}
+	\caption{Ciclo do IAS}
 \end{figure}
 
 \subsubsection{Conjunto de instruções IAS}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth]{tiposDeInstrução.png}
+	\caption{Tipos de instruções IAS}
+\end{figure}
+
 \subsection{Segunda geração: Transístores}
 \subsection{Terceira geração: Circuitos Integrados}
 \subsection{Gerações posteriores}
@@ -583,9 +601,9 @@ dos quais:
         críticos do sistema operacional. 
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{cortex.png}
+    \includegraphics[width=0.7\textwidth]{cortex.png}
     \caption{Típica estrutura de um chip de um microcontrolador baseado no
     Cortex-M3.}
 \end{figure}
